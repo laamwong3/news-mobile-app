@@ -32,7 +32,7 @@ export const categories = [
     pic: "https://img.icons8.com/fluent/96/000000/artificial-intelligence.png",
     name: "technology",
   },
-] as const;
+];
 
 export const country = [
   {
@@ -59,7 +59,7 @@ export const country = [
     code: "gb",
     name: "United Kingdom",
   },
-] as const;
+];
 
 export const sources = [
   {
@@ -82,7 +82,7 @@ export const sources = [
     name: "Google News",
     pic: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Google_News_icon.png",
   },
-] as const;
+];
 
 export const BASE_URL = "https://saurav.tech/NewsAPI/";
 

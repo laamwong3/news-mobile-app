@@ -4,10 +4,11 @@ import { SceneMap, TabView } from "react-native-tab-view";
 import DiscoveryScreen from "../screens/DiscoveryScreen";
 import NewsScreen from "../screens/NewsScreen";
 import Navigation from "./Navigation";
+import { useNews } from "../contexts/News";
 
 const NewsTab = () => {
   const layout = useWindowDimensions();
-  const [index, setIndex] = useState(1);
+  const { index, setIndex } = useNews();
   const [routes] = useState([
     {
       key: "first",
