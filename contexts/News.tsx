@@ -28,7 +28,9 @@ const News = ({ children }: NewsProps) => {
   }, [category]);
 
   return (
-    <NewsContext.Provider value={{ news, index, setIndex, fetchNews }}>
+    <NewsContext.Provider
+      value={{ news, index, setIndex, fetchNews, category, setCategory }}
+    >
       {children}
     </NewsContext.Provider>
   );

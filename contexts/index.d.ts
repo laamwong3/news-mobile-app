@@ -29,4 +29,6 @@ export interface NewsContextProps {
   index: number;
   setIndex: React.Dispatch<React.SetStateAction<number>>;
   fetchNews: () => Promise<void>;
+  category: string;
+  setCategory: React.Dispatch<React.SetStateAction<string>>;
 }
