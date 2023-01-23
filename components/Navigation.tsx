@@ -5,6 +5,7 @@ import {
   AntDesign,
   Ionicons,
 } from "@expo/vector-icons";
+import { useNews } from "../contexts/News";
 
 interface NavigationProps {
   index: number;
@@ -12,6 +13,8 @@ interface NavigationProps {
 }
 
 const Navigation = ({ index, setIndex }: NavigationProps) => {
+  const { fetchNews } = useNews();
+
   return (
     <View style={{ ...styles.container }}>
       {index === 0 ? (
@@ -39,7 +42,7 @@ const Navigation = ({ index, setIndex }: NavigationProps) => {
           <View style={{ ...styles.navigationText }}>
             <Text style={{ color: "white" }}>NEWS</Text>
           </View>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => fetchNews()}>
             <Ionicons name="ios-refresh" size={24} color="#007FFF" />
           </TouchableOpacity>
         </>
